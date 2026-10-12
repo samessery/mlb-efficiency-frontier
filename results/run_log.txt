@@ -1,0 +1,61 @@
+          term  estimate     se  lambda_su_over_sv
+         const   -0.5567 0.0100             1.9489
+ln_rel_payroll    0.1251 0.0105             1.9489
+       sigma_v    0.0906 0.0069             1.9489
+       sigma_u    0.1765 0.0121             1.9489
+        loglik  637.3181    NaN             1.9489
+ols_resid_skew   -0.4031    NaN             1.9489
+DEA LP vs hull check passed
+
+Observed vs equal-efficiency null:
+ measure statistic  observed  null_mean  null_p5  null_p95  share_of_sims_ge_observed
+ sfa_te      mean    0.8731     0.9357   0.9252    0.9463                     1.0000
+ sfa_te        sd    0.0682     0.0305   0.0213    0.0399                     0.0000
+ sfa_te  icc_team    0.0512    -0.0004  -0.0104    0.0103                     0.0000
+ sfa_te      acf1    0.3592    -0.0019  -0.0515    0.0539                     0.0000
+ sfa_te      acf2    0.2027     0.0004  -0.0512    0.0466                     0.0000
+ sfa_te      acf3    0.0821     0.0015  -0.0495    0.0547                     0.0033
+ sfa_te      acf4    0.0143    -0.0015  -0.0469    0.0497                     0.2833
+ sfa_te      acf5   -0.0313    -0.0044  -0.0569    0.0470                     0.8067
+ sfa_te      acf6    0.0125     0.0033  -0.0501    0.0586                     0.4000
+ sfa_te      acf7   -0.0027    -0.0023  -0.0508    0.0461                     0.4833
+ sfa_te      acf8   -0.0461    -0.0039  -0.0588    0.0510                     0.8867
+ dea_te      mean    0.8308     0.8942   0.8884    0.8992                     1.0000
+ dea_te        sd    0.1179     0.0754   0.0725    0.0783                     0.0000
+ dea_te  icc_team    0.0609     0.0114  -0.0020    0.0264                     0.0000
+ dea_te      acf1    0.3551     0.0490  -0.0020    0.0973                     0.0000
+ dea_te      acf2    0.2037     0.0301  -0.0217    0.0798                     0.0000
+ dea_te      acf3    0.1136     0.0174  -0.0337    0.0757                     0.0000
+ dea_te      acf4    0.0514     0.0092  -0.0423    0.0612                     0.0867
+ dea_te      acf5    0.0014     0.0084  -0.0401    0.0562                     0.5833
+ dea_te      acf6    0.0376     0.0165  -0.0344    0.0721                     0.2733
+ dea_te      acf7    0.0409     0.0109  -0.0412    0.0638                     0.1667
+ dea_te      acf8    0.0123     0.0053  -0.0506    0.0592                     0.4233
+
+sigma_u observed 0.1765; null mean 0.0850 (95th pct 0.0998)
+
+Top and bottom teams by mean residual (log wins above payroll-implied):
+                     seasons  mean_sfa_te  mean_dea_te  mean_resid  luck_se  hac_se  z_vs_luck  z_hac
+team                                                                                                 
+Oakland Athletics         39        0.896        0.882       0.068    0.013   0.032      5.300  2.164
+Tampa Bay Rays            26        0.883        0.908       0.056    0.016   0.066      3.516  0.841
+St. Louis Cardinals       39        0.901        0.859       0.052    0.013   0.020      4.060  2.680
+Cleveland Guardians       39        0.892        0.864       0.049    0.013   0.031      3.797  1.585
+Atlanta Braves            39        0.892        0.866       0.048    0.013   0.042      3.737  1.144
+                    seasons  mean_sfa_te  mean_dea_te  mean_resid  luck_se  hac_se  z_vs_luck  z_hac
+team                                                                                                
+Chicago Cubs             39        0.855        0.791      -0.041    0.013   0.023     -3.157 -1.770
+Colorado Rockies         31        0.847        0.770      -0.058    0.015   0.023     -3.984 -2.539
+Kansas City Royals       39        0.841        0.774      -0.066    0.013   0.026     -5.093 -2.526
+Baltimore Orioles        39        0.837        0.785      -0.066    0.013   0.033     -5.119 -1.982
+Detroit Tigers           39        0.832        0.768      -0.084    0.013   0.035     -6.478 -2.374
+
+By era:
+          mean_sfa_te  sd_sfa_te  ...  sd_log_resid  sd_log_resid_ex_short_seasons
+year                             ...                                             
+1985-02       0.8733     0.0642  ...        0.1313                         0.1322
+2003-11       0.8759     0.0661  ...        0.1318                         0.1318
+2012-16       0.8749     0.0642  ...        0.1307                         0.1307
+2017-23       0.8678     0.0814  ...        0.1713                         0.1690
+
+[4 rows x 5 columns]
